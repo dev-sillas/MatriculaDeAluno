@@ -1,0 +1,26 @@
+CREATE TABLE dadosaluno(
+	id INT  AUTO_INCREMENT UNIQUE KEY,
+	rgm INT(10) PRIMARY KEY,
+	nomes VARCHAR(30),
+	dataNasc CHAR(10),
+	cpf CHAR(14),
+	email VARCHAR(50),
+	endereco VARCHAR(50),
+	municipio VARCHAR(30),
+	uf CHAR(2),
+	cel CHAR(14),
+	curso VARCHAR(50),
+	campus VARCHAR(30),
+	periodo VARCHAR(20)
+	);
+CREATE TABLE notas(
+	idNotas INT AUTO_INCREMENT PRIMARY KEY,
+	rgm int(20) UNIQUE KEY,
+	disciplina VARCHAR(40),
+	semestre VARCHAR(10),
+	nota CHAR(5),
+	faltas INT(2)
+);
+ALTER TABLE dadosaluno ENGINE=INNODB;
+ALTER TABLE notas ENGINE=INNODB;
+Alter TABLE notas FORGEIN KEY (rgm) REFERENCES dadosaluno(rgm);

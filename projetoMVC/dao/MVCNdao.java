@@ -1,12 +1,12 @@
-package projetoMVC.dao;
-
+package br.com.exemplo.dao;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import projetoMVC.conexao.ConnectionFactory;
-import projetoMVC.model.Notas;
+import br.com.exemplo.model.Notas;
+import br.com.exemplo.ultil.ConnectionFactory;
+
 
 public class MVCNdao {
 	private Notas notas;

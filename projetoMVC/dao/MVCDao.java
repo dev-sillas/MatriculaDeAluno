@@ -1,16 +1,15 @@
-package projetoMVC.dao;
-
+package br.com.exemplo.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import projetoMVC.conexao.ConnectionFactory;
-import projetoMVC.model.DadosPessoais;
-
+import br.com.exemplo.model.DadosPessoais;
+import br.com.exemplo.ultil.ConnectionFactory;
 
 public class MVCDao {
+
 	private DadosPessoais dados;
 	private Connection conn;
 	private java.sql.PreparedStatement ps;
@@ -83,7 +82,7 @@ public class MVCDao {
 	}		
 }
 	//metodo LISTAR todos
-	public List<DadosPessoais> todos() throws Exception{
+	public List DadosPessoaistodos() throws Exception{
 		List<DadosPessoais> lista = new ArrayList<DadosPessoais>();
 		try {
 			ps = conn.prepareStatement("SELECT * FROM DadosAluno");
@@ -140,3 +139,4 @@ public class MVCDao {
 	}
 	
 }
+

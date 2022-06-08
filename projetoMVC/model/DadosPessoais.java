@@ -1,9 +1,6 @@
-package projetoMVC.model;
-
+package br.com.exemplo.model;
 
 public class DadosPessoais {
-	
-	
 	
 	private String campus;
 	private String cel;
